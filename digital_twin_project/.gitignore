@@ -2,11 +2,19 @@
 .v-env/
 digital-twin-v-env/
 digital_twin_venv/
+digital_twin_venv_py311/
 
 # Ignorer les fichiers d'environnement
 .env
 .venv
 
+# Ignorer les bibliothèques et fichiers binaires volumineux
+*.dylib
+*.so
+*.a
+*.dll
+
 # Autres fichiers et répertoires à ignorer si nécessaire
 *.pyc
 __pycache__/
+*.log
