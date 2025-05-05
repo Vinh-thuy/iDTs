@@ -1,0 +1,12 @@
+# Ignorer les environnements virtuels
+.v-env/
+digital-twin-v-env/
+digital_twin_venv/
+
+# Ignorer les fichiers d'environnement
+.env
+.venv
+
+# Autres fichiers et répertoires à ignorer si nécessaire
+*.pyc
+__pycache__/

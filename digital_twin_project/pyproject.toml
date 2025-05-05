@@ -1,0 +1,16 @@
+[project]
+name = "digital-twin-it"
+version = "0.1.0"
+description = "Prototype de jumeau numérique IT bancaire avec NetworkX, SimPy, Symbolic AI et supervision LLM."
+requires-python = ">=3.8"
+authors = [
+  { name = "Auteur", email = "auteur@example.com" }
+]
+
+[project.dependencies]
+networkx = "^3.2"
+simpy = "^4.1"
+openai = "^1.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
