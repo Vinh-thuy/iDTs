@@ -1,0 +1,35 @@
+# Environnements virtuels
+.v-env/
+*venv/
+*.venv
+.env
+
+# Fichiers système
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fichiers Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+
+# Fichiers de log
+*.log
+
+# Fichiers de build et distribution
+build/
+dist/
+*.egg-info/
+
+# Fichiers temporaires
+*.swp
+*~
+
+# Fichiers de sécurité
+*.pem
+*.key

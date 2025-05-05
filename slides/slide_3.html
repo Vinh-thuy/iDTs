@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture cible & Stack — Digital Twin IT</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            background-color: #f8fafc;
+            color: #0a2463;
+        }
+        .slide {
+            max-width: 1280px;
+            width: 100vw;
+            min-height: 720px;
+            background: linear-gradient(to right, #f0f4f8, #ffffff);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            font-weight: 700;
+            background: linear-gradient(to right, #0a2463, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            letter-spacing: 0.02em;
+        }
+        .archi-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(10,36,99,0.07);
+            margin: 0 1rem;
+            padding: 2rem 1.5rem;
+            flex: 1;
+            min-width: 220px;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .archi-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: #e6f0fb;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col justify-start items-start p-8 md:p-20">
+        <h1 class="title mb-12 z-10 text-center w-full">Architecture cible & Stack</h1>
+        <div class="w-full flex flex-col items-center z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mb-16">
+                <div class="archi-card">
+                    <div class="archi-icon"><i class="fas fa-project-diagram text-blue-800 text-2xl"></i></div>
+                    <h3 class="text-lg font-semibold text-blue-800">Graphe dynamique</h3>
+                    <p class="text-gray-700 mt-2">NetworkX pour le prototypage, TigerGraph pour la production, GNN pour la prédiction proactive.</p>
+                </div>
+                <div class="archi-card">
+                    <div class="archi-icon"><i class="fas fa-random text-green-700 text-2xl"></i></div>
+                    <h3 class="text-lg font-semibold text-blue-800">Simulation & règles</h3>
+                    <p class="text-gray-700 mt-2">SimPy pour simuler les événements, Symbolic AI pour appliquer les règles métiers.</p>
+                </div>
+                <div class="archi-card">
+                    <div class="archi-icon"><i class="fas fa-brain text-purple-700 text-2xl"></i></div>
+                    <h3 class="text-lg font-semibold text-blue-800">Superviseur LLM</h3>
+                    <p class="text-gray-700 mt-2">LLM externe (OpenAI, Ollama, Mistral) pour diagnostic, recommandations et génération de scénarios.</p>
+                </div>
+                <div class="archi-card">
+                    <div class="archi-icon"><i class="fas fa-puzzle-piece text-yellow-600 text-2xl"></i></div>
+                    <h3 class="text-lg font-semibold text-blue-800">Stack modulaire</h3>
+                    <p class="text-gray-700 mt-2">Python, FastAPI, React : chaque brique est indépendante, évolutive, et prête à s’interfacer.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Encadré résumé / Footer -->
+        <div class="mt-8 w-full flex flex-col items-center z-10">
+            <div class="w-full max-w-3xl rounded-lg bg-white bg-opacity-90 shadow p-6 text-center text-gray-700" style="font-size:1.15rem;">
+                <span class="font-semibold text-blue-800">En résumé :</span> Une architecture agile, modulaire et évolutive, prête pour l’industrialisation et l’intelligence augmentée.
+            </div>
+        </div>
+        <div class="decoration"></div>
+        <div class="grid-pattern"></div>
+    </div>
+</body>
+</html>

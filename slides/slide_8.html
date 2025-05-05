@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staffing de l'équipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            background-color: #f8fafc;
+            color: #0a2463;
+        }
+        .slide {
+            max-width: 1280px;
+            width: 100vw;
+            min-height: 720px;
+            background: linear-gradient(to right, #f0f4f8, #ffffff);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 3rem;
+            line-height: 1.1;
+            font-weight: 700;
+            background: linear-gradient(to right, #0a2463, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            letter-spacing: 0.02em;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #0a2463, #1e40af);
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 420px;
+            height: 720px;
+            opacity: 0.05;
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, #0a2463 1px, transparent 1px),
+                linear-gradient(to bottom, #0a2463 1px, transparent 1px);
+        }
+        .team-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(10,36,99,0.07);
+            transition: transform 0.15s, box-shadow 0.15s;
+            margin: 0 1rem;
+        }
+        .team-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(30,64,175,0.13);
+        }
+        .leader-card {
+            background: #e6f0fb;
+            border: 2px solid #1e40af;
+            box-shadow: 0 4px 16px rgba(30,64,175,0.08);
+            opacity: 1 !important;
+        }
+
+        .role-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+        }
+        .skill-tag {
+            display: inline-block;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .team-connector {
+            position: absolute;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .pulse-anim {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col justify-start items-start p-8 md:p-20">
+        <h1 class="title mb-12 z-10 text-center w-full">Staffing de l'équipe</h1>
+        
+        <div class="w-full flex flex-col items-center z-10">
+            <!-- Team Structure -->
+            <div class="relative w-full">
+                <!-- Stream Leader -->
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 mb-10">
+                    <div class="team-card leader-card p-5 flex flex-col items-center text-center w-72 pulse-anim">
+                        <div class="role-icon bg-blue-100 mb-3">
+                            <i class="fas fa-chess-king text-blue-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-blue-800">Stream Leader</h3>
+                        <p class="text-sm text-gray-600 mt-2">Supervision technique et stratégique</p>
+                        <div class="mt-2">
+                            <span class="skill-tag" style="background:#fff;color:#1e40af;font-weight:600;border:1px solid #1e40af;box-shadow:0 1px 4px rgba(30,64,175,0.08);">Vision produit</span>
+                            <span class="skill-tag" style="background:#fff;color:#1e40af;font-weight:600;border:1px solid #1e40af;box-shadow:0 1px 4px rgba(30,64,175,0.08);">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Members -->
+                <div class="flex justify-between mt-52">
+                    <!-- Backend Developer -->
+                    <div class="team-card p-5 flex flex-col items-center text-center w-60">
+                        <div class="role-icon bg-indigo-100">
+                            <i class="fas fa-database text-indigo-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Développeur Backend</h3>
+                        <p class="text-sm text-gray-600 mt-1">Simulation & Database Graph</p>
+                        <div class="mt-2">
+                            <span class="skill-tag">SimPy</span>
+                            <span class="skill-tag">NetworkX</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                    
+                    <!-- API Engineer -->
+                    <div class="team-card p-5 flex flex-col items-center text-center w-60">
+                        <div class="role-icon bg-green-100">
+                            <i class="fas fa-plug text-green-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Ingénieur API</h3>
+                        <p class="text-sm text-gray-600 mt-1">Interfaces applicatives sécurisées</p>
+                        <div class="mt-2">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Sécurité</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend Developer -->
+                    <div class="team-card p-5 flex flex-col items-center text-center w-60">
+                        <div class="role-icon bg-yellow-100">
+                            <i class="fas fa-desktop text-yellow-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Développeur Frontend</h3>
+                        <p class="text-sm text-gray-600 mt-1">Interfaces utilisateur réactives</p>
+                        <div class="mt-2">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">UX/UI</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Symbolic AI Specialist -->
+                    <div class="team-card p-5 flex flex-col items-center text-center w-60">
+                        <div class="role-icon bg-red-100">
+                            <i class="fas fa-brain text-red-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Spécialiste Symbolic AI</h3>
+                        <p class="text-sm text-gray-600 mt-1">Intelligence artificielle symbolique</p>
+                        <div class="mt-2">
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">LLMs</span>
+                        </div>
+                    </div>
+                    
+                    <!-- GNN Specialist -->
+                    <div class="team-card p-5 flex flex-col items-center text-center w-60">
+                        <div class="role-icon bg-purple-100">
+                            <i class="fas fa-project-diagram text-purple-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Spécialiste GNN</h3>
+                        <p class="text-sm text-gray-600 mt-1">Graph Neural Networks</p>
+                        <div class="mt-2">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Graph ML</span>
+                            <span class="skill-tag">Algo avancés</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Résumé / Footer -->
+        <div class="mt-16 w-full flex flex-col items-center z-10">
+            <div class="w-full max-w-3xl rounded-lg bg-white bg-opacity-90 shadow p-6 text-center text-gray-700" style="font-size:1.15rem;">
+                <strong>Résumé :</strong> Une équipe pluridisciplinaire, structurée et alignée sur les objectifs stratégiques, prête à délivrer rapidement des résultats visibles et à faire évoluer l’architecture vers le digital twin.
+            </div>
+        </div>
+        <!-- Team Benefits -->
+        <div class="mt-8 w-full flex justify-between z-10">
+            <div class="flex items-center">
+                <div class="h-10 w-10 flex items-center justify-center rounded-full bg-blue-100 mr-3">
+                    <i class="fas fa-users-cog text-blue-800"></i>
+                </div>
+                <span class="text-sm font-medium">Équipe complémentaire</span>
+            </div>
+            
+            <div class="flex items-center">
+                <div class="h-10 w-10 flex items-center justify-center rounded-full bg-blue-100 mr-3">
+                    <i class="fas fa-lightbulb text-blue-800"></i>
+                </div>
+                <span class="text-sm font-medium">Expertises spécialisées</span>
+            </div>
+            
+            <div class="flex items-center">
+                <div class="h-10 w-10 flex items-center justify-center rounded-full bg-blue-100 mr-3">
+                    <i class="fas fa-tasks text-blue-800"></i>
+                </div>
+                <span class="text-sm font-medium">Équipe dimensionnée au projet</span>
+            </div>
+            
+            <div class="flex items-center">
+                <div class="h-10 w-10 flex items-center justify-center rounded-full bg-blue-100 mr-3">
+                    <i class="fas fa-rocket text-blue-800"></i>
+                </div>
+                <span class="text-sm font-medium">Time-to-market optimisé</span>
+            </div>
+        </div>
+        
+        <div class="grid-pattern"></div>
+        <div class="decoration"></div>
+    </div>
+</body>
+</html>
