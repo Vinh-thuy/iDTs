@@ -106,6 +106,32 @@ Objectif : Constituer une équipe experte pour concevoir, développer et démont
 
 ---
 
+
+Profil 5 — Intégrateur API & OpenShift / Data Collector
+
+**Missions** :
+	•	Accompagner la migration des composants IA/data vers une architecture conteneurisée sur OpenShift.
+	•	Assurer l’intégration et l’exposition des APIs (REST, WebSocket) des modules IA, agents LLM, ou composants de collecte.
+	•	Mettre en place la collecte de flux manquants pour enrichir les jumeaux numériques (infrastructure IT, métriques réseau, dépendances applicatives, etc.).
+	•	Interfacer de façon sécurisée les sources critiques (CMDB, Illumio, outils de Discovery) avec les nouveaux pipelines de données.
+	•	Travailler en collaboration avec les équipes data, SRE, et cybersécurité pour garantir performance, résilience et conformité.
+
+**Compétences attendues** :
+	•	Maîtrise des plateformes OpenShift, Docker, Kubernetes pour le déploiement de services.
+	•	Solides compétences en intégration API : REST, WebSocket, OpenAPI/Swagger.
+	•	Expérience dans la mise en place de pipelines de collecte de données IT (infrastructure, réseau, sécurité, logs).
+	•	Connaissance des outils de découverte d’infrastructure (ServiceNow Discovery, IPAM, Illumio…).
+	•	Notions sur les environnements d’hébergement de modèles IA/ML (GPU, conteneurs, orchestration).
+	•	Sensibilité aux problématiques de sécurité, IAM, authentification/API tokens.
+
+
+**Profil recherché** :
+	•	Ingénieur cloud ou devOps avec expérience sur OpenShift ou Kubernetes managé en contexte bancaire ou sensible.
+	•	Data engineer ou intégrateur orienté infrastructure, capable de dialoguer avec les équipes SRE, cybersécurité et data science.
+	•	Profil hybride ayant déjà opéré des migrations de collectes vers des architectures microservices temps réel.
+	•	Expérience avec des architectures distribuées de type LLM/agent, ou volonté de monter en compétence rapidement sur ces briques.
+
+
 Ces profils s’intègreront dans une démarche exploratoire, agile, orientée démonstrateur, avec un fort accent sur la **coopération IA/Graphe** et sur l’**exploitation intelligente des données IT**.
 
 ⚠️ Le déploiement (API, OpenShift, sécurisation, exposition) sera coordonné avec une équipe plateforme existante, mais les candidats doivent être ouverts à collaborer dans ce contexte hybride.
