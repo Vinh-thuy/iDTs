@@ -18,8 +18,9 @@ function App() {
       body: JSON.stringify({ question })
     });
     const data = await res.json();
+    console.log('[DEBUG] /ask response', data);
     setMessages(prev => [...prev, { role: 'bot', content: data.answer }]);
-    if (data.image_url) setImageUrl(data.image_url); else setImageUrl('');
+    setImageUrl(data.image_url || '');
     setQuestion(''); // Vide le champ
   };
 
