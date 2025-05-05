@@ -4,7 +4,7 @@ Objectif : Constituer une équipe experte pour concevoir, développer et démont
 
 ---
 
-### 1. Data Scientist – IA Neuronale / GNN / GECO
+### 1. Data Scientist – IA Neuronale / GNN / GECo
 
 **Intitulé du poste** : Data Scientist spécialisé en Graph ML et modèles prédictifs sur graphes
 
@@ -43,7 +43,7 @@ Objectif : Constituer une équipe experte pour concevoir, développer et démont
 
 **Compétences attendues** :
 
-* Python, SimPy ou autre moteur de simulation / moteur de règles (Drools, CLIPS…)
+* Python, Pathway ou autre moteur de simulation / moteur de règles (Drools, CLIPS…)
 * Bonnes capacités d’abstraction métier (CMDB, dépendances, contraintes IT)
 * Capacité à structurer des cas d’usage reproductibles à partir de règles
 
@@ -69,7 +69,7 @@ Objectif : Constituer une équipe experte pour concevoir, développer et démont
 **Compétences attendues** :
 
 * LangChain, LangGraph, OpenAI-compatible APIs, gestion de contexte conversationnel
-* Bonne culture LLM open source (Mistral, LLaMA, Falcon, etc.)
+* Bonne culture LLM open source (Mistral, LLaMA, etc.)
 * Compréhension des enjeux de supervision IT (incidents, métriques, topologie)
 * Connaissances en RAG (Retrieval-Augmented Generation) et en raisonnement guidé
 
