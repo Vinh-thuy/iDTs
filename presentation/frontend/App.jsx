@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
   const [imageUrl, setImageUrl] = useState('');
   const [messages, setMessages] = useState([]); // {role: 'user'|'bot', content: string}
   const messagesEndRef = useRef(null);
+  const containerRef = useRef(null);
 
   const handleAsk = async () => {
     if (!question.trim()) return;
@@ -15,7 +16,7 @@ function App() {
     const res = await fetch('http://localhost:8000/ask', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question })
+      body: JSON.stringify({ question, history: messages })
     });
     const data = await res.json();
     console.log('[DEBUG] /ask response', data);
@@ -24,12 +25,16 @@ function App() {
     setQuestion(''); // Vide le champ
   };
 
-  // Scroll auto vers le bas
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBottom = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
     }
-  }, [messages]);
+  };
+
+  // Scroll après rendu du DOM pour positionner au bas
+  useLayoutEffect(() => {
+    scrollToBottom();
+  }, [messages, imageUrl]);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -42,16 +47,16 @@ function App() {
       {/* Affiche la colonne image uniquement si imageUrl existe */}
       {imageUrl && (
         <div style={{ flex: 1, background: '#f5f5f5', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.3s', height: '100%' }}>
-          <img src={`http://localhost:8000${imageUrl}`} alt="Présentation" style={{ maxWidth: '90%', maxHeight: '90%', borderRadius: 12, boxShadow: '0 2px 12px #aaa' }} />
+          <img src={`http://localhost:8000${imageUrl}`} alt="Présentation" style={{ maxWidth: '90%', maxHeight: '90%', borderRadius: 12, boxShadow: '0 2px 12px #aaa' }} onLoad={scrollToBottom} />
         </div>
       )}
       {/* Layer droite : chatbot */}
       <div style={{ flex: imageUrl ? 1 : '1 1 100%', display: 'flex', flexDirection: 'column', height: '100vh', background: '#fff', width: imageUrl ? undefined : '100vw', transition: 'all 0.3s' }}>
         <div style={{ padding: '32px 48px 16px 48px', flexShrink: 0 }}>
-          <h1 style={{ marginTop: 0 }}>Chatbot Présentation IA</h1>
+          <h1 style={{ marginTop: 0 }}>Stream Digital Twin</h1>
         </div>
         {/* Zone d'historique des messages */}
-        <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', padding: '0 48px 0 48px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', background: '#fff' }}>
+        <div ref={containerRef} style={{ flex: 1, minHeight: 0, overflowY: 'auto', padding: '0 48px 0 48px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', background: '#fff' }}>
           {messages.map((msg, idx) => (
             <div key={idx} style={{
               alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',

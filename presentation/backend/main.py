@@ -29,6 +29,7 @@ def read_root():
 async def ask_bot(request: Request):
     data = await request.json()
     question = data.get("question", "")
+    history = data.get("history", [])
     openai_api_key = os.getenv("OPENAI_API_KEY")
     if not openai_api_key:
         return JSONResponse(content={"answer": "[Erreur] Clé API OpenAI manquante."}, status_code=500)
@@ -48,12 +49,14 @@ async def ask_bot(request: Request):
         system_prompt = (
             "IMPORTANT : Si l'utilisateur demande une introduction ou définition générale du Digital Twin, insère systématiquement la balise [IMAGE:digital_twin.png] dans ta réponse.\n"
             "IMPORTANT : Si l'utilisateur pose une question sur le LLM lors de la phase d'ingestion, insère la balise [IMAGE:llm_ingestion.jpeg] dans la réponse.\n"
-            "IMPORTANT : Si l'utilisateur pose une question sur ce qu'est un réseau neuronal, un réseau symbolique, ou sur la comparaison ou l'explication des deux, insère la balise [IMAGE:symbolique_neuronale.jpeg] dans la réponse.\n"
-            "IMPORTANT : Si la question de l'utilisateur porte sur le LLM agentique, insère la balise [IMAGE:agentic.jpeg] dans la réponse.\n"
+            "IMPORTANT : Si l'utilisateur pose une question sur pourquoi on utilise une ia neuronal et une ia symbolique insère la balise [IMAGE:symbolique_neuronale.jpeg] dans la réponse.\n"
+            "IMPORTANT : Si la question de l'utilisateur mentionne le LLM agentique, insère la balise [IMAGE:agentic.jpeg] dans la réponse.\n"
+            "IMPORTANT : Si l'utilisateur demande le planning, les étapes à suivre ou le plan d'action, insère la balise [IMAGE:planning.png] dans la réponse.\n"
+            "IMPORTANT : Si l'utilisateur demande les hypothèses ou l'architecture du Digital Twin, insère la balise [IMAGE:archi.png] dans la réponse.\n"
             "IMPORTANT : Tu participes à une démonstration de 30 minutes devant un public non expert. Tes réponses doivent être très synthétiques, claires, pédagogiques et adaptées à ce contexte. Les longs textes ne sont pas appropriés : privilégie la concision, les explications simples et les formulations accessibles.\n"
             "IMPORTANT : Ta personnalité doit être fun, amicale, avec une bonne dose d’humour, comme un vrai pote qui brainstorme avec l’utilisateur. Tu simplifies au maximum, tu encourages, tu guides, tu fais sourire et tu rends la conversation vivante et motivante.\n"
             "Donne toujours des réponses TRÈS courtes, quitte à être un peu taquin ou à répondre par une blague. Si la question mérite plus de détails, propose à l’utilisateur de demander une explication ou d’aller plus loin.\n"
-            "N’hésite pas à poser une question à l’utilisateur pour l’impliquer ou vérifier s’il souhaite plus de détails.\n"
+            #"N’hésite pas à poser une question à l’utilisateur pour l’impliquer ou vérifier s’il souhaite plus de détails.\n"
             "IMPORTANT : Structure toujours tes réponses pour maximiser la lisibilité : \n"
             "- Utilise des paragraphes courts et espacés.\n"
             "- Mets les mots-clés et concepts importants en **gras** (markdown).\n"
@@ -68,12 +71,19 @@ async def ask_bot(request: Request):
             "En cas de contradiction, donne toujours la priorité à la logique et aux indications des documents indexés."
         )
         openai.api_key = openai_api_key
+        # Construit l'historique de messages pour OpenAI
+        openai_messages = [{"role": "system", "content": system_prompt}]
+        # Ajoute les messages précédents si fournis
+        for msg in history:
+            if msg.get("role") == "user":
+                openai_messages.append({"role": "user", "content": msg.get("content", "")})
+            elif msg.get("role") in ("bot", "assistant"):
+                openai_messages.append({"role": "assistant", "content": msg.get("content", "")})
+        # Ajoute la question courante
+        openai_messages.append({"role": "user", "content": question})
         response = openai.chat.completions.create(
             model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": question}
-            ],
+            messages=openai_messages,
             max_tokens=512,
             temperature=0.7
         )
