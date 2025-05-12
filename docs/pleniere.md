@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,93 +60,93 @@
 <body>
 
   <section>
-    <h1>Diapositive 1 : Qui je suis</h1>
-    <p>Je rejoins une équipe structurée autour de deux squads complémentaires — <strong>AI Core Function</strong> et <strong>AI Function Exposition</strong> — avec deux projets existants majeurs :</p>
+    <h1>Slide 1: Who I Am</h1>
+    <p>I am joining a structured team built around two complementary squads — <strong>AI Core Function</strong> and <strong>AI Function Exposition</strong> — with two major existing projects:</p>
     <ul>
-      <li><strong>Eureka</strong> : un assistant intelligent de type chatbot LLM déjà en production, développé par l'équipe AI Function Exposition.</li>
-      <li><strong>Insight Booster</strong> : un projet dédié à la construction du <strong>Knowledge Graph organisationnel</strong>, dont je fais partie et dont les résultats seront directement intégrés dans la plateforme de simulation.</li>
+      <li><strong>Eureka</strong>: an intelligent chatbot assistant (LLM-based) already in production, developed by the AI Function Exposition team.</li>
+      <li><strong>Insight Booster</strong>: a project dedicated to building the <strong>organizational Knowledge Graph</strong>, which I am part of, and whose outputs will feed directly into the simulation platform.</li>
     </ul>
-    <p>Mon rôle est d’intégrer une logique de simulation intelligente en croisant mes compétences de Data Scientist avec un renfort ciblé en Data Engineering et en DevOps pour garantir l’industrialisation. Je suis le lien entre ces deux projets et les squads qui les portent.</p>
-    <p>J'arrive également avec un <strong>premier prototype d'un LLM agentique avec raisonnement symbolique</strong>, conçu pour enrichir Eureka. Ce moteur permet de <strong>décomposer automatiquement des questions complexes</strong> posées en langage naturel, d'interroger dynamiquement le graphe de connaissances, et de générer des réponses synthétiques à haute valeur ajoutée, par exemple :</p>
+    <p>My role is to integrate intelligent simulation logic, combining my Data Scientist expertise with targeted support from Data Engineering and DevOps to ensure industrialization. I bridge both projects and their respective squads.</p>
+    <p>I also bring an initial <strong>agentic LLM prototype with symbolic reasoning</strong>, designed to enhance Eureka. This engine can <strong>automatically break down complex questions</strong> posed in natural language, dynamically query the knowledge graph, and generate high-value answers, such as:</p>
     <ul>
-      <li>"Quel est le niveau de ma production sur les prochains mois ?"</li>
-      <li>"Quelles sont les tendances de charge par activité ?"</li>
-      <li>"Quels sont les risques organisationnels en cas de changement de configuration ?"</li>
+      <li>"What is my projected production level over the next few months?"</li>
+      <li>"What are the workload trends by activity?"</li>
+      <li>"What are the organizational risks if a configuration change occurs?"</li>
     </ul>
   </section>
 
   <section>
-    <h1>Diapositive 2 : Pourquoi maintenant (Why)</h1>
-    <h2>Problèmes actuels :</h2>
+    <h1>Slide 2: Why Now</h1>
+    <h2>Current Problems:</h2>
     <ul>
-      <li>Multiplicité des outils IT → vision fragmentée</li>
-      <li>Besoin croissant d’<strong>anticipation</strong>, pas seulement de surveillance</li>
-      <li>Manque de <strong>connexion</strong> entre infrastructure, organisation et dynamique réelle</li>
+      <li>Many IT tools → fragmented visibility</li>
+      <li>Growing need for <strong>anticipation</strong>, not just monitoring</li>
+      <li>Lack of <strong>connection</strong> between infrastructure, organization, and real activity</li>
     </ul>
-    <h2>Opportunité :</h2>
+    <h2>Opportunity:</h2>
     <ul>
-      <li>Base existante solide : <strong>Eureka</strong> (LLM assistant) + KG Infrastructure</li>
-      <li>Résultats du projet <strong>Insight Booster</strong> (KG Organisationnel) disponibles</li>
-      <li>Prototype de LLM agentique avec raisonnement symbolique déjà opérationnel</li>
-      <li>Technologie mûre pour croiser : données techniques, métiers, dynamiques</li>
-      <li>Hybridation possible : IA <strong>symbolique</strong> + IA <strong>neuronale</strong> + LLM</li>
+      <li>Solid existing foundation: <strong>Eureka</strong> (LLM assistant) + Infrastructure KG</li>
+      <li>Outputs from <strong>Insight Booster</strong> (Organizational KG) available</li>
+      <li>Operational prototype of agentic LLM with symbolic reasoning</li>
+      <li>Mature technology to integrate technical, business, and dynamic data</li>
+      <li>Hybrid approach: <strong>Symbolic AI</strong> + <strong>Neural AI</strong> + LLM</li>
     </ul>
     <div class="highlight">
-      Le moment est venu de transformer un graphe statique en système vivant capable de simuler, raisonner et accompagner la décision.
+      Now is the right time to evolve from a static graph to a living system capable of reasoning, simulating, and supporting decision-making.
     </div>
   </section>
 
   <section>
-    <h1>Diapositive 3 : Quelle est la solution ? (What)</h1>
-    <h2>Objectif : Construire la plateforme <em>Simulation Insight</em></h2>
+    <h1>Slide 3: What is the Solution?</h1>
+    <h2>Objective: Build the <em>Simulation Insight</em> Platform</h2>
     <ul>
-      <li><strong>Knowledge Graphs</strong> : Organisationnel (Insight Booster), Infrastructure, Activité</li>
-      <li><strong>IA symbolique</strong> : Raisonnement logique, règles métier</li>
-      <li><strong>IA neuronale</strong> : Prédictions sur signaux dynamiques</li>
-      <li><strong>LLM (Eureka enrichi)</strong> : Interface intelligente, capable de comprendre, reformuler et simuler</li>
+      <li><strong>Knowledge Graphs</strong>: Organizational (Insight Booster), Infrastructure, Activity</li>
+      <li><strong>Symbolic AI</strong>: Logical reasoning, business rules</li>
+      <li><strong>Neural AI</strong>: Predictions from dynamic signals</li>
+      <li><strong>LLM (enhanced Eureka)</strong>: Smart interface to understand, reformulate, and simulate</li>
     </ul>
     <div class="highlight">
-      Une solution explicable, exploratoire et simulable pour accompagner la prise de décision IT.
+      An explainable, exploratory, and simulatable solution to support IT decision-making.
     </div>
   </section>
 
   <section>
-    <h1>Diapositive 4 : Organisation cible et staffing (Who)</h1>
-    <h2>Squads existantes :</h2>
+    <h1>Slide 4: Target Organization & Staffing</h1>
+    <h2>Existing Squads:</h2>
     <ul>
-      <li><strong>AI Core Function</strong> : Prototypage, modèles, logique IA</li>
-      <li><strong>AI Function Exposition</strong> : Mise en production, application Eureka</li>
+      <li><strong>AI Core Function</strong>: Prototyping, models, AI logic</li>
+      <li><strong>AI Function Exposition</strong>: Production deployment, Eureka application</li>
     </ul>
-    <h2>Fonctionnement cible :</h2>
+    <h2>Target Operating Model:</h2>
     <ul>
-      <li><strong>AI Core Function</strong> joue un rôle de laboratoire d'innovation : elle conçoit et teste les briques intelligentes de Simulation Insight (graphe enrichi, raisonnement symbolique, modèles prédictifs).</li>
-      <li><strong>AI Function Exposition</strong> assure l'industrialisation des cas d’usage : elle intègre les composants validés dans l’application Eureka et les expose aux utilisateurs.</li>
-      <li>Le projet <strong>Insight Booster</strong> alimente le graphe organisationnel, qui constitue un pilier de la simulation.</li>
-      <li>L’interaction continue entre les deux squads garantit l’équilibre entre innovation et robustesse opérationnelle.</li>
+      <li><strong>AI Core Function</strong> serves as the innovation lab: designing and testing Simulation Insight intelligence (enriched graph, symbolic reasoning, predictive models).</li>
+      <li><strong>AI Function Exposition</strong> ensures productionization: integrating validated components into Eureka and exposing them to users.</li>
+      <li>The <strong>Insight Booster</strong> project feeds the organizational graph, a simulation cornerstone.</li>
+      <li>Continuous interaction between squads ensures balance between innovation and operational robustness.</li>
     </ul>
-    <h2>Un environnement favorable au succès :</h2>
+    <h2>A Success-Enabling Environment:</h2>
     <ul>
-      <li><strong>Compétences humaines de haut niveau</strong> : experts graph, DevOps, data scientists, ingénieurs systèmes.</li>
-      <li><strong>Socle technologique robuste</strong> : infrastructure de production, outil Discovery (scan infra), accès au Data Lake (open data).</li>
-      <li><strong>Organisation synergique</strong> : mutualisation des données, contributions croisées entre équipes IT, IA et gouvernance.</li>
+      <li><strong>High-level human expertise</strong>: graph experts, DevOps, data scientists, system engineers.</li>
+      <li><strong>Robust technological foundation</strong>: production infrastructure, Discovery tool (infra scanning), access to Data Lake (open data).</li>
+      <li><strong>Synergistic organization</strong>: shared data, cross-team collaboration (IT, AI, governance).</li>
     </ul>
     <div class="highlight">
-      Une organisation articulée autour d’Eureka et Insight Booster, portée par un véritable hub de compétences et de technologies, conçu pour faire émerger une solution intelligente, maintenable et utile en production.
+      An organization built around Eureka and Insight Booster, supported by a real hub of competencies and technologies, designed to deliver an intelligent, sustainable, and useful production solution.
     </div>
   </section>
 
   <section>
-    <h1>Diapositive 5 : Étapes fonctionnelles (How)</h1>
+    <h1>Slide 5: Functional Steps (How)</h1>
     <ol>
-      <li><strong>Je visualise l'infrastructure</strong> : cartographie automatique et relationnelle</li>
-      <li><strong>Je relie les responsabilités</strong> : visibilité sur qui est responsable de quoi</li>
-      <li><strong>Je rends l'activité visible</strong> : incidents, performances, changements</li>
-      <li><strong>Je questionne avec Eureka</strong> : langage naturel, contexte et compréhension</li>
-      <li><strong>Je simule les scénarios</strong> : anticipation des impacts avant déploiement</li>
-      <li><strong>Je reçois des recommandations</strong> : aide à la décision via IA hybride</li>
+      <li><strong>I visualize the infrastructure</strong>: automated, relational mapping</li>
+      <li><strong>I link responsibilities</strong>: visibility into who owns what</li>
+      <li><strong>I make activity visible</strong>: incidents, performance, changes</li>
+      <li><strong>I query with Eureka</strong>: natural language, context, and understanding</li>
+      <li><strong>I simulate scenarios</strong>: anticipate impacts before deployment</li>
+      <li><strong>I get recommendations</strong>: decision support through hybrid AI</li>
     </ol>
     <div class="highlight">
-      Une valeur livrée à chaque étape. Un système vivant, intelligent et au service du pilotage IT.
+      Value is delivered at every stage. A living, intelligent system in service of IT governance.
     </div>
   </section>
 
