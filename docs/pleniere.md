@@ -124,8 +124,14 @@
       <li>Le projet <strong>Insight Booster</strong> alimente le graphe organisationnel, qui constitue un pilier de la simulation.</li>
       <li>L’interaction continue entre les deux squads garantit l’équilibre entre innovation et robustesse opérationnelle.</li>
     </ul>
+    <h2>Un environnement favorable au succès :</h2>
+    <ul>
+      <li><strong>Compétences humaines de haut niveau</strong> : experts graph, DevOps, data scientists, ingénieurs systèmes.</li>
+      <li><strong>Socle technologique robuste</strong> : infrastructure de production, outil Discovery (scan infra), accès au Data Lake (open data).</li>
+      <li><strong>Organisation synergique</strong> : mutualisation des données, contributions croisées entre équipes IT, IA et gouvernance.</li>
+    </ul>
     <div class="highlight">
-      Une organisation articulée autour d’Eureka et Insight Booster, conçue pour faire vivre une solution intelligente, maintenable et utile en production.
+      Une organisation articulée autour d’Eureka et Insight Booster, portée par un véritable hub de compétences et de technologies, conçu pour faire émerger une solution intelligente, maintenable et utile en production.
     </div>
   </section>
 
